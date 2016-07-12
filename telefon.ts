@@ -6,12 +6,12 @@ class Telefon {
     }
 
     printInfo() {
-        console.log(`${this.marka}: zostal jedynie kolor ${this.color}`);
-        console.log(`1Y Warranty Cost: ${this.calculateWarrantyCost()}`);
+        console.log(`${this.marka}: zostal jedynie kolor ${this.color} w cenie ${this.cena} PLN`);
+        console.log(`Cena wraz z gwarancja: ${this.calculateWarrantyCost()}`);
     };
 
     private calculateWarrantyCost() {
-        this.warrantyCost = (this.cena * 1 / 12).toFixed(2);
+        this.warrantyCost = ((this.cena) + (this.cena * 1 / 12)).toFixed(2);
         return this.warrantyCost;
     }
 }
